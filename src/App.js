@@ -1,10 +1,9 @@
 import "./App.css";
 import {useWeb3React} from "@web3-react/core";
 import Web3 from "web3";
-import {useEffect, useState} from "react";
-import {ERC20} from './contract/ERC20';
+import {useEffect} from "react";
 import {NFT} from "./contract/NFT";
-import {injected, walletConnectConnector} from "./utils";
+import {walletConnectConnector} from "./connectors";
 
 
 function App() {
