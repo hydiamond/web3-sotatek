@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createWeb3ReactRoot, Web3ReactProvider } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
-import 'antd/dist/antd.css'; //
 
 function getLibrary(provider, connector) {
     // depend on web3 or ethers
