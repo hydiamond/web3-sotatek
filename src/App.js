@@ -45,12 +45,21 @@ function App() {
     }
 
 
+    const getAmountNFT = async () => {
+        const web3 = new Web3(library.provider);
+        const dtaContract = new web3.eth.Contract(NFT.ABI, NFT.Address);
+        const amount = await dtaContract.methods.balanceOf(account, 1).call();
+        console.log(amount, 'sss');
+
+    }
+
+
     return (
         <div className="App">
             <div style={{marginTop: "4rem"}}>
                 {
                     account ?
-                        <> <h1>Account: {account} <button onClick={createNFT}>Create NFT</button> <button onClick={burnNFT}>Burn NFT</button> </h1>
+                        <> <h1>Account: {account} <button onClick={createNFT}>Create NFT</button> <button onClick={getAmountNFT}>GET AMOUNT</button> <button onClick={burnNFT}>Burn NFT</button> </h1>
 
                         </> :
                         <>
